@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="el"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>John Club | Custom 3D Printing στην Ελλάδα</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#93000a",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-fixed-dim": "#00e479",
+                    "tertiary-fixed": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "on-surface": "#e5e2e1",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "surface-container-low": "#1c1b1b",
+                    "on-primary-fixed": "#00210c",
+                    "surface-tint": "#00e479",
+                    "primary-fixed": "#60ff99",
+                    "surface-variant": "#353534",
+                    "inverse-on-surface": "#313030",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-tertiary-container": "#636261",
+                    "surface-bright": "#3a3939",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-container": "#b6b5b4",
+                    "tertiary": "#fefafa",
+                    "on-primary": "#003919",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "surface": "#131313",
+                    "on-background": "#e5e2e1",
+                    "on-secondary": "#303030",
+                    "surface-container": "#201f1f",
+                    "secondary": "#c8c6c5",
+                    "secondary-fixed": "#e4e2e1",
+                    "primary": "#f1ffef",
+                    "outline-variant": "#3b4b3d",
+                    "on-surface-variant": "#b9cbb9",
+                    "inverse-surface": "#e5e2e1",
+                    "secondary-container": "#474746",
+                    "on-primary-container": "#007139",
+                    "surface-container-highest": "#353534",
+                    "surface-dim": "#131313",
+                    "on-tertiary": "#313030",
+                    "background": "#131313",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "tertiary-container": "#e1dedd",
+                    "on-primary-fixed-variant": "#005228",
+                    "primary-container": "#00ff88",
+                    "outline": "#849585",
+                    "on-error": "#690005",
+                    "inverse-primary": "#006d37"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "48px",
+                    "xl": "80px",
+                    "xs": "4px",
+                    "gutter": "24px",
+                    "margin": "32px",
+                    "md": "24px",
+                    "sm": "12px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Space Grotesk"],
+                    "body-lg": ["Inter"],
+                    "h2": ["Space Grotesk"],
+                    "h1": ["Space Grotesk"],
+                    "body-md": ["Inter"],
+                    "mono-data": ["Space Grotesk"],
+                    "h3": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "h2": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "mono-data": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.2", "letterSpacing": "0em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #0F0F0F; color: #F5F5F5; font-family: 'Inter', sans-serif; }
+        .neon-glow { text-shadow: 0 0 10px rgba(0, 255, 136, 0.4); }
+        .neon-border { border: 1px solid #2A2A2A; transition: all 0.3s ease; }
+        .neon-border:hover { border-color: #00FF88; box-shadow: 0 0 15px rgba(0, 255, 136, 0.2); }
+        .glass-bg { backdrop-filter: blur(10px); background-color: rgba(24, 24, 24, 0.8); }
+        .progress-line { height: 4px; background: #2A2A2A; position: relative; overflow: hidden; }
+        .progress-line::after { content: ''; position: absolute; left: -50%; width: 50%; height: 100%; background: #00FF88; box-shadow: 0 0 10px #00FF88; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="antialiased">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-[#2A2A2A] bg-[#0F0F0F]/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 h-20 max-w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#00FF88] text-3xl">precision_manufacturing</span>
+<span class="font-['Space_Grotesk'] text-2xl font-black tracking-tighter text-[#00FF88] uppercase">John Club</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] text-[#F5F5F5] hover:text-[#00FF88] transition-colors text-sm uppercase tracking-widest font-bold" href="#services">Υπηρεσίες</a>
+<a class="font-['Space_Grotesk'] text-[#F5F5F5] hover:text-[#00FF88] transition-colors text-sm uppercase tracking-widest font-bold" href="#portfolio">Έργα</a>
+<a class="font-['Space_Grotesk'] text-[#F5F5F5] hover:text-[#00FF88] transition-colors text-sm uppercase tracking-widest font-bold" href="#process">Διαδικασία</a>
+<a class="font-['Space_Grotesk'] bg-primary-container text-on-primary-container px-6 py-2.5 font-bold uppercase tracking-tighter scale-95 active:scale-90 transition-transform" href="#contact">Επικοινωνία</a>
+</div>
+<button class="md:hidden text-[#00FF88]">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[795px] flex items-center overflow-hidden px-8 md:px-16 lg:px-24">
+<div class="grid lg:grid-cols-2 gap-12 items-center w-full max-w-7xl mx-auto">
+<div class="z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00FF88]/10 border border-[#00FF88]/30 mb-6">
+<span class="w-2 h-2 rounded-full bg-[#00FF88] animate-pulse"></span>
+<span class="text-[#00FF88] font-mono-data text-label-caps uppercase">Industrial Additive Manufacturing</span>
+</div>
+<h1 class="font-h1 text-h1 text-white mb-6 uppercase tracking-tighter">Custom 3D Printing <br/><span class="text-primary-container">στην Ελλάδα</span></h1>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-lg">Μετατρέπουμε τις ιδέες σου σε πραγματικά αντικείμενα — από miniatures μέχρι functional parts με βιομηχανική ακρίβεια.</p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary-container text-on-primary-container px-10 py-4 font-label-caps uppercase tracking-widest font-black transition-all hover:brightness-110 active:scale-95" href="#contact">Ζήτα Προσφορά</a>
+<a class="border border-primary-container text-primary-container px-10 py-4 font-label-caps uppercase tracking-widest font-black transition-all hover:bg-primary-container/10 active:scale-95" href="#portfolio">Δες τα Έργα</a>
+</div>
+</div>
+<div class="relative hidden lg:block h-[650px] w-full overflow-hidden rounded-2xl border border-primary-container/20 group shadow-[0_0_50px_rgba(0,255,136,0.1)]">
+<!-- Lighting Overlays -->
+<div class="absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-[#00FF88]/10 z-10"></div>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,136,0.05),transparent_70%)]"></div>
+<!-- Main Visual (Placeholder for Futuristic 3D Printer) -->
+<img alt="Futuristic 3D Printer" class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000 ease-out" data-alt="Premium close-up of a futuristic industrial 3D printer with neon green filament and dark metallic textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVIwb7ZUa_-zG79nngi-AshrakJ5Xr3mPrbCv2yyGHMy4p8PYnnxRDgJnaouC6Y5Nd3TF033JKfh-vyr1SsMoT24HahYkxPauCM7lO-569sklQEh04q80yTOnUZnwfTdxfqrZlHPvSdu9yzJ5pHKDhxX1akAb4VNwcSatY5OB9C0LjqGd_Z0mX9UzBr4ojepUsbtowlpMwGTwx3RlSpUU7YXcqv9FOq_BfBFiBXdLs9YYVbAPQk3m3qg0dGRbQgJ2B1-exPNzwMCHP"/>
+<!-- Industrial UI Elements -->
+<div class="absolute top-0 right-0 p-8 z-20">
+<div class="h-24 w-[1px] bg-gradient-to-b from-[#00FF88] to-transparent animate-pulse"></div>
+<div class="mt-4 -mr-2 text-[10px] text-primary-container font-mono-data rotate-90 origin-left uppercase tracking-[0.3em]">System_Active</div>
+</div>
+<div class="absolute bottom-0 left-0 p-8 z-20 w-full">
+<div class="flex justify-between items-end">
+<div class="bg-[#0F0F0F]/80 backdrop-blur-xl border border-primary-container/30 p-6 rounded-lg neon-border">
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 bg-primary-container/10 rounded-full border border-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container animate-pulse">precision_manufacturing</span>
+</div>
+<div>
+<p class="text-[10px] text-secondary font-mono-data uppercase tracking-widest">Printer Status</p>
+<p class="text-[#00FF88] font-bold font-display tracking-tighter">OPTIMIZED_PRINT_FLOW</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<div class="px-3 py-1 bg-primary-container/10 border border-primary-container/20 rounded text-[10px] text-primary-container font-mono-data">
+          EXTRUDER_TEMP: 235°C
+        </div>
+<div class="px-3 py-1 bg-primary-container/10 border border-primary-container/20 rounded text-[10px] text-primary-container font-mono-data">
+          LAYER_HEIGHT: 0.05MM
+        </div>
+</div>
+</div>
+</div>
+<!-- Scanline effect -->
+<div class="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.02),rgba(0,255,0,0.01),rgba(0,0,255,0.02))] z-15 bg-[length:100%_2px,3px_100%]"></div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl bg-[#0e0e0e] border-y border-[#2A2A2A]" id="services">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<p class="text-primary-container font-mono-data text-label-caps mb-2">CAPABILITIES</p>
+<h2 class="font-h2 text-h2 text-white uppercase tracking-tighter">Τι Μπορούμε να Φτιάξουμε</h2>
+</div>
+<p class="text-secondary max-w-sm text-right font-body-md">Από το πρωτότυπο στην τελική παραγωγή, χρησιμοποιούμε τεχνολογίες FDM και Resin.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<!-- Miniatures -->
+<div class="bg-[#181818] neon-border p-6 group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-4 group-hover:scale-110 transition-transform block">sports_esports</span>
+<h3 class="font-h3 text-h3 text-white mb-2">Miniatures</h3>
+<p class="text-secondary text-sm">Υψηλή λεπτομέρεια για tabletop gaming και συλλέκτες.</p>
+</div>
+<!-- Custom Prints -->
+<div class="bg-[#181818] neon-border p-6 group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-4 group-hover:scale-110 transition-transform block">inventory_2</span>
+<h3 class="font-h3 text-h3 text-white mb-2">Custom</h3>
+<p class="text-secondary text-sm">Προσαρμοσμένα αντικείμενα βάσει των δικών σας αρχείων.</p>
+</div>
+<!-- Διακοσμητικά -->
+<div class="bg-[#181818] neon-border p-6 group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-4 group-hover:scale-110 transition-transform block">architecture</span>
+<h3 class="font-h3 text-h3 text-white mb-2">Decor</h3>
+<p class="text-secondary text-sm">Μοναδικά διακοσμητικά εσωτερικού χώρου και δώρα.</p>
+</div>
+<!-- Functional Parts -->
+<div class="bg-[#181818] neon-border p-6 group border-primary-container/50">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-4 group-hover:scale-110 transition-transform block">reset_wrench</span>
+<h3 class="font-h3 text-h3 text-white mb-2">Functional</h3>
+<p class="text-secondary text-sm">Ανθεκτικά μέρη για μηχανική χρήση και εργαλεία.</p>
+</div>
+<!-- Prototyping -->
+<div class="bg-[#181818] neon-border p-6 group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-4 group-hover:scale-110 transition-transform block">model_training</span>
+<h3 class="font-h3 text-h3 text-white mb-2">Proto</h3>
+<p class="text-secondary text-sm">Γρήγορη παραγωγή πρωτοτύπων για δοκιμές.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section (Bento Grid) -->
+<section class="py-xl px-8" id="portfolio">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-h2 text-h2 text-white mb-12 uppercase tracking-tighter text-center">Έργα 3D Printing</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[800px]">
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="detailed close-up of a resin-printed dragon figurine with sharp edges and scales on a dark textured background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWR_EQE4n59yobauhiDjUoCih8ieNfflkF06_xEkqxrq2jchRng2piu9ABzAz3Vt-mpcAyXArewvYxiuMXpOLdbv1B3KD2xSOhvssCiqVhOUpfIQub12J5czVgTFBkp1KIS2891mKA-Z89sFz5KBZ0Gi7xIUQxX19EArLyxk-hNB4a8lbDYeUuUXsN_67RnG92l_NN0y-00voH7BbAXaX5RJwNsTq_FGCob89yrjMz27cNICujo_YBnh11D8SIi2Ok53TJybi95aE0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-8 flex flex-col justify-end">
+<h4 class="text-[#00FF88] font-bold uppercase tracking-widest">Resin Masterpiece</h4>
+<p class="text-white">Dungeons &amp; Dragons Miniature</p>
+</div>
+</div>
+<div class="md:col-span-2 relative group overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="intricate 3D printed geometric lamp shade casting beautiful shadows on a white wall in a modern room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN2OT8ONDW3zEQghbJ9Az39vQJsKr2Gjkz9ZdYOoIgiVEXGApuBozlWdGlOJtuKXKAfbLirLxmSYsq3Wix3O10SikPn3Eaa2G1vmrjuLCeSAZasOA4ZZY8-nHi58h05jUoyw4kcq36bKzTY2ETkToNG1VmJRCyoGp0vzDvAaGxuxhAaY4WkkaaI5E1LlRboPTYLRXpcYKyINfvgGvI_U-5cxePhasE360meCPIbWkRP1ZE-u9IvWOEr9NOA8wKjzB4hUFaB3abNxcM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-6 flex flex-col justify-end">
+<h4 class="text-[#00FF88] font-bold uppercase tracking-widest">Interior Design</h4>
+<p class="text-white">Parametric Light Fixture</p>
+</div>
+</div>
+<div class="relative group overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="mechanical carbon-fiber reinforced gears and components for a robotic assembly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADar8Ig6j2_C8dD1mE_XE3sGmydBkQUUcLiiIAUGCKcS63i7D1kAk1DLv3Xbzy6OrPMd0X-IbvJOc55wRn_FPqCFpflpfDwjEenKBGjLkMk5Hd4Uze9lTldeQbKKyNbJY_DyzQ9hT3v8PAqZXB04jmyai_N9CbcA1yoD8ugSr1XzsPDDxKG3DeJXp7dHJQs8CrgfmhsjcWuEVtVmFvbMGCoP0pRBW1Bvgho95ESVoLFrQpE6Py9aBsyjUq0-QRRqcEi_FE0Et9Jt4t"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-4 flex flex-col justify-end">
+<h4 class="text-[#00FF88] text-xs font-bold uppercase tracking-widest">Industrial</h4>
+</div>
+</div>
+<div class="relative group overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="custom 3D printed phone stand with organic Voronoi patterns in matte black" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa4T4eR_HUiG20Juw1WdQoyjzgmP9SlyUOnho8NoM6TCWgz9fY1shj284qGUBWXhV8mV46a-jtXTpHCcAC_5iuevTRv0WDXK3CYL4Mi2DrhvV0UV7b3X-n0CWavDfaw6QG3UD1cmFJ4EE8EiJBXyW2STLZEvTFXsr_6-gghcqECUyEY93lg0Zq_RzQl9-NImTfgyKOJCpeLtrFQV7KxzpOnJ_titAKnTUYM2ZnHmDFlY32qY8EjYlSviBLhQLN8pWVoxAANy7v2i7p"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-4 flex flex-col justify-end">
+<h4 class="text-[#00FF88] text-xs font-bold uppercase tracking-widest">Lifestyle</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Video/Visual Break Section -->
+<section class="py-xl bg-surface-container relative">
+<div class="max-w-5xl mx-auto px-8 text-center">
+<h2 class="font-h2 text-h2 text-white mb-8 uppercase tracking-tighter">Από το σχέδιο στην εκτύπωση</h2>
+<div class="aspect-video bg-black rounded-xl border border-[#2A2A2A] overflow-hidden shadow-2xl relative group cursor-pointer">
+<img class="w-full h-full object-cover opacity-50" data-alt="time-lapse photography of a 3D printing nozzle building a complex architectural model with glowing filament" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUWBqomdwm610x1H1m2ux6mSaNIdAKbBNJQF2u2ecijtvnurNiZ7v9M9PR-nPQlHs3z1QGk2p8v4HrcebJ23mi5lVASFSyvLTm_sMWj0n9RUs15cK6LPx8vSE6i_uXXVuf1uJ18ySk0ldYvYhe5pvnBd6bCJ31-fX1Ev9SUFrDUaLiPY9jDgz4MY8YDK1tGweHCeCreH2QB2PoD4lZPsDkprwArV1y39q7nDmDjpodLlgPm0osIXAKa_EXMQI5n63Rteyh4SgtUZFE"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-20 h-20 rounded-full bg-[#00FF88] flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_30px_#00FF88]">
+<span class="material-symbols-outlined text-black text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-xl px-8 border-y border-[#2A2A2A]" id="process">
+<div class="max-w-7xl mx-auto">
+<p class="text-primary-container font-mono-data text-label-caps mb-4 text-center">WORKFLOW</p>
+<h2 class="font-h2 text-h2 text-white mb-16 uppercase tracking-tighter text-center">Πώς Δουλεύουμε</h2>
+<div class="grid md:grid-cols-4 gap-8 relative">
+<!-- Step 1 -->
+<div class="relative">
+<div class="text-[#00FF88] font-black text-6xl mb-4 opacity-20">01</div>
+<h4 class="font-h3 text-white mb-2 uppercase tracking-tight">Send Idea</h4>
+<p class="text-secondary text-sm">Στείλε μας το αρχείο (.stl, .obj) ή περιέγραψε την ιδέα σου.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<div class="text-[#00FF88] font-black text-6xl mb-4 opacity-20">02</div>
+<h4 class="font-h3 text-white mb-2 uppercase tracking-tight">Adjust Design</h4>
+<p class="text-secondary text-sm">Βελτιστοποιούμε το σχέδιο για την καλύτερη δυνατή εκτύπωση.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative">
+<div class="text-[#00FF88] font-black text-6xl mb-4 opacity-20">03</div>
+<h4 class="font-h3 text-white mb-2 uppercase tracking-tight">Print</h4>
+<p class="text-secondary text-sm">Επιλέγουμε το υλικό και ξεκινάμε την παραγωγή στο εργαστήριό μας.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative">
+<div class="text-[#00FF88] font-black text-6xl mb-4 opacity-20">04</div>
+<h4 class="font-h3 text-white mb-2 uppercase tracking-tight">Deliver</h4>
+<p class="text-secondary text-sm">Παραλαμβάνεις το αντικείμενο έτοιμο για χρήση σε όλη την Ελλάδα.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Us Section -->
+<section class="py-xl px-8 bg-[#0F0F0F]">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2">
+<h2 class="font-h2 text-h2 text-white mb-8 uppercase tracking-tighter">Γιατί John Club</h2>
+<div class="space-y-6">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary-container">verified</span>
+<div>
+<h5 class="font-h3 text-xl text-white">Custom Λύσεις</h5>
+<p class="text-secondary">Δεν κάνουμε απλά εκτύπωση, δίνουμε λύσεις στα προβλήματά σας.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary-container">biotech</span>
+<div>
+<h5 class="font-h3 text-xl text-white">Tech Aesthetic</h5>
+<p class="text-secondary">Μοντέρνα προσέγγιση με χρήση των τελευταίων τεχνολογιών εκτύπωσης.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary-container">monitoring</span>
+<div>
+<h5 class="font-h3 text-xl text-white">Εστίαση στη Λεπτομέρεια</h5>
+<p class="text-secondary">Κάθε micron μετράει. Εγγυημένη ποιότητα σε κάθε παραγγελία.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary-container">local_shipping</span>
+<div>
+<h5 class="font-h3 text-xl text-white">Πανελλαδική Κάλυψη</h5>
+<p class="text-secondary">Αποστολή σε κάθε γωνιά της Ελλάδας με ασφαλή συσκευασία.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 grid grid-cols-2 gap-4">
+<div class="bg-surface-container-high p-8 rounded-lg text-center border border-[#2A2A2A]">
+<p class="text-primary-container text-4xl font-black mb-2">500+</p>
+<p class="text-xs uppercase font-bold tracking-widest text-secondary">PROJECTS</p>
+</div>
+<div class="bg-primary-container p-8 rounded-lg text-center">
+<p class="text-black text-4xl font-black mb-2">100%</p>
+<p class="text-xs uppercase font-bold tracking-widest text-black/60">SATISFACTION</p>
+</div>
+<div class="col-span-2 bg-[#181818] p-8 rounded-lg border border-[#2A2A2A] relative overflow-hidden">
+<div class="flex justify-between items-center mb-4">
+<span class="text-white font-bold">Print Precision</span>
+<span class="text-[#00FF88] font-mono-data">0.05mm</span>
+</div>
+<div class="progress-line"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-xl px-8 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto">
+<h2 class="font-h2 text-h2 text-white mb-12 uppercase tracking-tighter text-center">Τι λένε οι πελάτες μας</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-[#181818] p-8 border border-[#2A2A2A]">
+<div class="flex text-[#00FF88] mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-secondary mb-6 font-body-md">"Εξαιρετική λεπτομέρεια στην εκτύπωση του prototype που χρειαζόμουν για τη σχολή. Πολύ γρήγορη εξυπηρέτηση!"</p>
+<p class="text-white font-bold">— Γιώργος Π.</p>
+</div>
+<div class="bg-[#181818] p-8 border border-[#2A2A2A]">
+<div class="flex text-[#00FF88] mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-secondary mb-6 font-body-md">"Φτιάξαμε custom δώρα για το γραφείο και όλοι ενθουσιάστηκαν. Η ποιότητα του υλικού είναι κορυφαία."</p>
+<p class="text-white font-bold">— Μαρία Κ.</p>
+</div>
+<div class="bg-[#181818] p-8 border border-[#2A2A2A]">
+<div class="flex text-[#00FF88] mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-secondary mb-6 font-body-md">"Η επικοινωνία ήταν άψογη. Με βοήθησαν να διορθώσω το αρχείο μου για να βγει σωστά η εκτύπωση."</p>
+<p class="text-white font-bold">— Νίκος Λ.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-xl px-8 border-t border-[#2A2A2A]">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-h2 text-h2 text-white mb-12 uppercase tracking-tighter text-center">Συχνές Ερωτήσεις</h2>
+<div class="space-y-4">
+<div class="bg-[#181818] p-6 border border-[#2A2A2A] hover:border-[#00FF88] transition-colors cursor-pointer">
+<div class="flex justify-between items-center">
+<h4 class="font-bold">Πόσο κοστίζει μια 3D εκτύπωση;</h4>
+<span class="material-symbols-outlined text-[#00FF88]">add</span>
+</div>
+<div class="mt-4 text-secondary text-sm hidden">Η τιμή εξαρτάται από τον χρόνο εκτύπωσης, το υλικό και το μέγεθος του αντικειμένου.</div>
+</div>
+<div class="bg-[#181818] p-6 border border-[#2A2A2A] hover:border-[#00FF88] transition-colors cursor-pointer">
+<div class="flex justify-between items-center">
+<h4 class="font-bold">Πόσος χρόνος χρειάζεται για την παράδοση;</h4>
+<span class="material-symbols-outlined text-[#00FF88]">add</span>
+</div>
+</div>
+<div class="bg-[#181818] p-6 border border-[#2A2A2A] hover:border-[#00FF88] transition-colors cursor-pointer">
+<div class="flex justify-between items-center">
+<h4 class="font-bold">Μπορώ να στείλω δικό μου σχέδιο;</h4>
+<span class="material-symbols-outlined text-[#00FF88]">add</span>
+</div>
+</div>
+<div class="bg-[#181818] p-6 border border-[#2A2A2A] hover:border-[#00FF88] transition-colors cursor-pointer">
+<div class="flex justify-between items-center">
+<h4 class="font-bold">Κάνετε αποστολές πανελλαδικά;</h4>
+<span class="material-symbols-outlined text-[#00FF88]">add</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl px-8 bg-surface-container-high border-t border-[#2A2A2A]" id="contact">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
+<div>
+<h2 class="font-h2 text-h1 text-white mb-6 uppercase tracking-tighter">Στείλε μας την <span class="text-primary-container">ιδέα σου</span></h2>
+<p class="text-secondary mb-10 font-body-lg">Συμπλήρωσε τη φόρμα και θα επικοινωνήσουμε μαζί σου με μια αναλυτική προσφορά.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-6 p-4 border border-[#2A2A2A] rounded-lg">
+<div class="w-12 h-12 rounded bg-primary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container">mail</span>
+</div>
+<div>
+<p class="text-xs uppercase font-bold text-secondary">EMAIL</p>
+<p class="text-white font-mono-data">info@johnclub.gr</p>
+</div>
+</div>
+<div class="flex items-center gap-6 p-4 border border-[#2A2A2A] rounded-lg">
+<div class="w-12 h-12 rounded bg-primary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container">chat</span>
+</div>
+<div>
+<p class="text-xs uppercase font-bold text-secondary">VIBER / WHATSAPP</p>
+<p class="text-white font-mono-data">+30 690 000 0000</p>
+</div>
+</div>
+</div>
+</div>
+<form class="bg-[#131313] p-8 border border-[#2A2A2A] space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-1">
+<label class="text-xs uppercase font-bold text-secondary tracking-widest">ΟΝΟΜΑΤΕΠΩΝΥΜΟ</label>
+<input class="w-full bg-[#2A2A2A] border-0 border-b-2 border-[#F5F5F5] focus:ring-0 focus:border-[#00FF88] text-white py-3 px-0 transition-colors" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-xs uppercase font-bold text-secondary tracking-widest">EMAIL</label>
+<input class="w-full bg-[#2A2A2A] border-0 border-b-2 border-[#F5F5F5] focus:ring-0 focus:border-[#00FF88] text-white py-3 px-0 transition-colors" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-xs uppercase font-bold text-secondary tracking-widest">ΠΕΡΙΓΡΑΦΗ PROJECT</label>
+<textarea class="w-full bg-[#2A2A2A] border-0 border-b-2 border-[#F5F5F5] focus:ring-0 focus:border-[#00FF88] text-white py-3 px-0 transition-colors" placeholder="Περιγράψτε τι θέλετε να εκτυπώσετε, διαστάσεις, υλικό..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-4 font-black uppercase tracking-widest transition-all hover:brightness-110 active:scale-95" type="submit">Ζήτα Προσφορά</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0F0F0F] border-t border-[#2A2A2A]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-12 w-full gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#00FF88] text-2xl">precision_manufacturing</span>
+<span class="text-xl font-bold text-[#F5F5F5] uppercase tracking-tighter">John Club</span>
+</div>
+<p class="text-[#A0A0A0] font-['Space_Grotesk'] text-sm tracking-wide max-w-xs text-center md:text-left">
+                    © 2024 John Club. Πρωτοπορία στην Τρισδιάστατη Εκτύπωση.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-[#A0A0A0] hover:text-[#00FF88] transition-colors text-sm font-['Space_Grotesk']" href="#">Υπηρεσίες</a>
+<a class="text-[#A0A0A0] hover:text-[#00FF88] transition-colors text-sm font-['Space_Grotesk']" href="#">Χαρτοφυλάκιο</a>
+<a class="text-[#A0A0A0] hover:text-[#00FF88] transition-colors text-sm font-['Space_Grotesk']" href="#">Διαδικασία</a>
+<a class="text-[#A0A0A0] hover:text-[#00FF88] transition-colors text-sm font-['Space_Grotesk']" href="#">Συχνές Ερωτήσεις</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-[#2A2A2A] flex items-center justify-center rounded hover:border-[#00FF88] text-white transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-10 h-10 border border-[#2A2A2A] flex items-center justify-center rounded hover:border-[#00FF88] text-white transition-all" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
